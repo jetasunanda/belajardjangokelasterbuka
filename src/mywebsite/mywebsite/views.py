@@ -3,4 +3,8 @@ from django.shortcuts import render
 
 # method view index
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'judul':'Warteg',
+        'kontributor':'bambang',
+    }
+    return render(request, 'index.html', context)
