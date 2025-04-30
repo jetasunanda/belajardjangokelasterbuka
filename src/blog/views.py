@@ -5,10 +5,16 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     context = {
-        'judul':'blog',
+        'judul':'Warteg',
+        'subjudul':'Blog',
         'kontributor':'anto',
+        'nav': [
+            ['/', 'Home'],
+            ['/blog/cerita', 'Cerita'],
+            ['/blog/news', 'News'],
+        ]
     }
-    return render(request, 'blog/index.html', context)
+    return render(request, 'index.html', context)
 
 def news(request):
     context = {

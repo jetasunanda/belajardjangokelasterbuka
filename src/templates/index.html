@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{judul}}</title>
+    <title>{{subjudul}} | {{judul}}</title>
   </head>
   <body>
-    <h1>Selamat datang di {{judul}}</h1>
+    <h1>{{subjudul}} di {{judul}}</h1>
     <h2>kontributor: {{kontributor}}</h2>
     <p>Website ini dibuat dengan Django</p>
+    <ul>
+      <!-- Template tags -->
+      {% for link,name in nav%}
+      
+      <li>
+        <a href="{{link}}" title="">{{name}}</a>
+      </li>
+
+      {% endfor %}
+    </ul>
     <ul>
       <li><a href="/" title="">home</a></li>
       <li><a href="/about" title="">about</a></li>
